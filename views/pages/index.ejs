@@ -6,6 +6,9 @@
 
 <body>
 
+  <h1>Hello world</h1>
+  <button onclick="sayHello()">say hello</button>
+
   <%- include ("../partials/nav.ejs") %>
 
 <div class="jumbotron text-center">
@@ -62,5 +65,14 @@
 </div>
 
 
+<script>
+let sayHello = () => {
+  axios.post('/Hello/').then((response) => {
+    let message = response.data.message;
+    alert(message);
+  })
+}
+
+</script>
 </body>
 </html>
