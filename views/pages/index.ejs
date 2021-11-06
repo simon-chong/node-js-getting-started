@@ -67,7 +67,9 @@
 
 <script>
 let sayHello = () => {
+  console.log('called, posting')
   axios.post('/Hello/').then((response) => {
+    console.log('received from be');
     let message = response.data.message;
     alert(message);
   })
