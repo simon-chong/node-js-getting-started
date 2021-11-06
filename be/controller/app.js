@@ -2,7 +2,7 @@ var express = require("express");
 //var bodyParser = require("body-parser");
 var app = express();
 var port = 3000;
-var hostname = "localhost";
+var hostname = "https://immense-ocean-01570.herokuapp.com";
 //var logger = require("../middleware/mid");
 //Implement the User model inside the index.js file.
 //const be = require("../services/be");
@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.post('/Hello', (req, res, next) => {
+app.post('/Hello/', (req, res, next) => {
     console.log('received after posting');
     res.send({message:"hello"});
 })
