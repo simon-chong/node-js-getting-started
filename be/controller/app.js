@@ -25,3 +25,6 @@ app.post('/Hello/', (req, res, next) => {
     console.log('received after posting');
     res.send({message:"hello"});
 })
+
+
+module.exports = app;
